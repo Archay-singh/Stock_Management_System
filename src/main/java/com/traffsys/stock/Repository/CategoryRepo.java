@@ -21,7 +21,7 @@ public interface CategoryRepo extends JpaRepository<Category, Long> {
 	@Query(value = "SELECT * FROM category WHERE name=?1", nativeQuery = true)
 	Category findCategoryByName(String name);
 	
-	
+	 
 	
 	@Query(value = "SELECT COUNT(*) FROM category", nativeQuery = true)
 	Long countTotalCategories(String category);
