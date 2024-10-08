@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  stock-mgmt:
+      image: stockmgmt:v1.0
+      volumes:
+      - C:/workspace-spring-tool-suit/11-springboot_project_StockMangementSystem/:C:/workspace-spring-tool-suit\11-springboot_project_StockMangementSystem/
+      network_mode: "host"
+      restart: always
+      environment: 
+        - TZ=Asia/Kolkata
+      logging:
+        driver: json-file
+        options:
+          max-size: "50m"
+          max-file: "3"
